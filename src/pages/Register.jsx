@@ -33,10 +33,10 @@ const Register = () => {
     return (
         <div className='justify-center flex container mx-auto'>
             <form className='p-10 border' onSubmit={handleOnSubmit}>
-                <input className='block border my-4 p-2 w-72' type="text" name="name" id="name" placeholder='Enter name' />
-                <input className='block border my-4 p-2 w-72' type="email" name="email" id="email" placeholder='Enter email' />
-                <input className='block border my-4 p-2 w-72' type="password" name="password" id="password" placeholder='Password' />
-                <input className='border w-72' type="submit" value="Create" />
+                <input className='block border rounded-lg my-4 p-2 w-72 outline-none' type="text" name="name" id="name" placeholder='Enter name' required />
+                <input className='block border rounded-lg my-4 p-2 w-72 outline-none' type="email" name="email" id="email" placeholder='Enter email' required />
+                <input className='block border rounded-lg my-4 p-2 w-72 outline-none' type="password" name="password" id="password" placeholder='Password' required/>
+                <input className='border border-blue-600 rounded-lg w-72 py-1 bg-blue-600 hover:bg-white text-white hover:text-blue-600 font-semibold cursor-pointer duration-500' type="submit" value="Create" />
                 <p className='my-5'>Already have an account ? <Link to='/login' className='text-blue-600'>Login</Link> </p>
             </form>
         </div>
