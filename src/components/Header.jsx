@@ -9,15 +9,13 @@ import { AuthContext } from '../providers/AuthContextProvider';
 
 const Header = () => {
 
-    const { user } = useContext(AuthContext);
+    const { user, logOut } = useContext(AuthContext);
 
     const [ displayUserInfo, setDisplayUserInf ] = useState(false);
 
+    let [responsiveMenu, setResponsiveMenu ] = useState(false);
 
 
-    
-
-    let [responsiveMenu, setResponsiveMenu ] = useState(false)
 
     const activeLinkStyle = ({isActive}) =>{
         return{
@@ -45,7 +43,7 @@ const Header = () => {
                                 <div className={ displayUserInfo ? `absolute border rounded-lg bg-slate-700 text-white right-0 p-5` : `absolute hidden` }>
                                     <h1 className=''>Name: {user.displayName}</h1>
                                     <h1 className=''>Email: {user.email}</h1>
-                                    <button className='border p-1 mt-5 rounded-lg'>Logout</button>
+                                    <button className='border p-1 mt-5 rounded-lg' onClick={()=>{logOut()}}>Logout</button>
                                 </div>
                             </p> : <NavLink className={'px-3 font-semibold hover:text-red-700 duration-500'} style={activeLinkStyle} onClick={()=>setResponsiveMenu(!responsiveMenu)} to='/login'>Login</NavLink>
 
