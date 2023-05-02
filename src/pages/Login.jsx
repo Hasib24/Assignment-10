@@ -1,7 +1,12 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import { Link } from 'react-router-dom';
+import { AuthContext } from '../providers/AuthContextProvider';
 
 const Login = () => {
+
+    const { user } = useContext(AuthContext)
+
+    console.log(user);
 
     const handleOnSubmit = (e) =>{
         e.preventDefault();
