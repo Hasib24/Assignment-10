@@ -15,19 +15,28 @@ const Register = () => {
     const handleOnSubmit = (e) =>{
         e.preventDefault();
         const form = e.target;
+        let name = form.name.value;
         let email = form.email.value;
         let password = form.password.value;
 
         createUser(email, password)
-        .then(res => {
-            updateProfile(auth.currentUser, { displayName: "Hasibul Islam" })
-            .then((result) => {console.log(result)})
+        .then((res) =>{
+
+            updateProfile(auth.currentUser, { displayName: name })
+            .then(()=>{
+                // profile updated 
+            })
+            .catch(error => console.log(error.message))
 
             setUser(res.user)
-        })
+            
+            form.reset()
+        } )
         .catch(error => console.log(error.message))
 
     }
+
+    
 
 
 
