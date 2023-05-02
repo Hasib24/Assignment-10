@@ -4,9 +4,9 @@ import { AuthContext } from '../providers/AuthContextProvider';
 
 const Login = () => {
 
-    const { user } = useContext(AuthContext)
+    const { signInUser, user, setUser } = useContext(AuthContext)
 
-    console.log(user);
+    
 
     const handleOnSubmit = (e) =>{
         e.preventDefault();
@@ -14,8 +14,12 @@ const Login = () => {
         let email = form.email.value;
         let password = form.password.value;
 
-        console.log(email, password);
+        signInUser(email, password)
+        .then(res => setUser(res.user))
+
+     
     }
+    console.log(user);
 
 
     return (
