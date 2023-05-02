@@ -28,6 +28,10 @@ const Register = () => {
             })
             .catch(error => console.log(error.message))
 
+      
+
+            res.user.displayName = name;
+
             setUser(res.user)
             
             form.reset()
