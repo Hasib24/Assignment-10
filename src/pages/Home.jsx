@@ -6,7 +6,7 @@ import Newslatter from './homepage_compo/Newslatter';
 
 const Home = () => {
     return (
-        <div className='container mx-auto'>
+        <div className=''>
             <Bannar></Bannar>
             <Chefs></Chefs>
             <PopularRecipes></PopularRecipes>
