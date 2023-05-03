@@ -4,7 +4,7 @@ import ChefCard from './ChefCard';
 
 const Chefs = () => {
     return (
-        <div className='md:grid md:grid-cols-12 text-center'>
+        <div className='py-10 md:grid md:grid-cols-12 text-center'>
             <div className='col-span-4'>
                 <img className='rounded-lg shadow-lg' src="https://images.pexels.com/photos/3814446/pexels-photo-3814446.jpeg?auto=compress&cs=tinysrgb&w=600" alt="" />
                 <BigBtn>Master Chefs</BigBtn>
