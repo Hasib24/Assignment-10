@@ -193,3 +193,7 @@ Create a website that shows the recipes of all available chefs. The website must
 16: "metadata"
 ​
 length: 17
+
+He work as a Chinese chef, Smith have a strong understanding of Chinese ingredients, including a variety of meats, seafood, vegetables, and spices. He is well-versed in their regional variations and seasonal availability, and  have a keen sense of balance in flavors, textures, and colors, creating visually stunning and delicious dishes.
+
+Smith Chu work in a variety of settings, from small, family-owned restaurants to high-end fine dining establishments. Depending on his experience, he is specialize in a particular regional cuisine, such as Sichuan or Cantonese, or have a more general expertise in Chinese cooking. Above all, he is dedicated to creating delicious and memorable dining experiences for his customers and expanding his knowledge of Chinese cuisine.
