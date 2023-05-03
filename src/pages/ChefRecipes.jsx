@@ -3,14 +3,15 @@ import { useLoaderData } from 'react-router-dom';
 import { TbNumber } from 'react-icons/tb';
 import { BsCalendar2Month } from 'react-icons/bs';
 import { BiLike } from 'react-icons/bi';
+import ChefRecipeCardGroup from './ChefRecipeCardGroup';
 
 const ChefRecipes = () => {
     const chef = useLoaderData();
     
-    const {id, chefPicture, chefName, shortBio, yearsOfExperience, numberOfRecipes, likes} = chef;
+    const {id, chefPicture, chefName, shortBio, yearsOfExperience, numberOfRecipes, likes, recipes} = chef;
     return (
         <>
-          5  <section className=' p-2 '>
+           <section className=' p-2 '>
                 <div className='container mx-auto md:grid md:grid-cols-12'>
                     <div className='col-span-5 px-10 py-16'><img className='' src={chefPicture} alt="" /></div>
                     <div className='col-span-7 flex flex-col justify-center px-10'>
@@ -26,9 +27,8 @@ const ChefRecipes = () => {
                     </div>
                 </div>
             </section>
-            <section>
-                recipies
-            </section>
+            <ChefRecipeCardGroup></ChefRecipeCardGroup>
+
         </>
 
     );
