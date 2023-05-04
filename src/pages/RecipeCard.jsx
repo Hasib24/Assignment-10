@@ -1,10 +1,36 @@
 import React from 'react';
 import NormalBtn from '../components/NormalBtn';
+import { json } from 'react-router-dom';
 
 const RecipeCard = ({recipe}) => {
-    const {recipiImg, recipiName, ingredients, cookingMethod, ratings} = recipe;
+
+
+
+    const handleAddToFavourite = (id) =>{
+        let storedRecipe = localStorage.getItem('favoriteRecipi')
+
+        if(storedRecipe){
+            let pastFavourite = JSON.parse(storedRecipe)
+            let match = pastFavourite.find(pastId => pastId==id)
+
+            if(!match){
+
+                let favoriteRecipes = [...pastFavourite, id]
+                localStorage.setItem('favoriteRecipi', JSON.stringify(favoriteRecipes))
+            }else{return}
+           
+        }else{
+            let favoriteRecipes = [id]
+            localStorage.setItem('favoriteRecipi', JSON.stringify(favoriteRecipes))
+
+        }  
+    }
+
+
+    
+    const {id, recipiImg, recipiName, ingredients, cookingMethod, ratings} = recipe;
     return (
-        <div className='m-3 px-8 py-5 flex justify-between bg-white'>
+        <div className='m-3 px-8 py-5 md:flex justify-between bg-white'>
             <div className='border px-3 py-4'>
                 <h1>{recipiName}</h1>
                 <span>{ratings}</span>
@@ -24,7 +50,8 @@ const RecipeCard = ({recipe}) => {
                 </ul>
             </div>
             <div className='border flex items-center'>
-                <NormalBtn>Add to Favourite</NormalBtn>
+                <span onClick={()=>handleAddToFavourite(id)}><NormalBtn>Add to Favourite</NormalBtn></span>
+                
             </div>
             
         </div>

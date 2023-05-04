@@ -18,7 +18,7 @@ const ChefRecipes = () => {
                         <h1 className='text-5xl font-bold'>{chefName}</h1>
                         <p className='text-xl text-justify'>{shortBio[0]}</p>
                         <p className='text-xl text-justify'>{shortBio[1]}</p>
-                        <div className='flex justify-between px-5'>
+                        <div className='md:flex justify-between px-5'>
 
                             <h1 className='border p-2 font-semibold'><TbNumber className='text-4xl inline-block '></TbNumber>Number of Recipes : {numberOfRecipes}</h1>
                             <h1 className='border p-2 font-semibold'><BsCalendar2Month className='text-3xl inline-block '></BsCalendar2Month>Years of Experience : {yearsOfExperience}</h1>
