@@ -44,9 +44,10 @@ const Header = () => {
                 <div className='text-3xl p-1 border rounded-md md:hidden '>
                     { responsiveMenu ? <MdClose onClick={()=>handleResponsiveCrossBtn()}></MdClose> : <GoThreeBars onClick={()=>setResponsiveMenu(!responsiveMenu)}></GoThreeBars> }
                 </div>
-                <nav className={`text-xl flex flex-col md:block  p-2 ${responsiveMenu ? `absolute right-4 top-20 bg-[#333] rounded-md` : `absolute right-2 -top-40`} md:static md:bg-inherit duration-500`}>
+                <nav className={`text-xl flex flex-col md:block  p-2 ${responsiveMenu ? `absolute right-4 top-20 bg-[#d4d3d3] rounded-md` : `absolute right-2 -top-40`} md:static md:bg-inherit duration-500`}>
                     <NavLink className={'px-3 font-semibold hover:text-red-700 duration-500'} style={activeLinkStyle} onClick={()=>setResponsiveMenu(!responsiveMenu)} to='/'>Home</NavLink>
                     <NavLink className={'px-3 font-semibold hover:text-red-700 duration-500'} style={activeLinkStyle} onClick={()=>setResponsiveMenu(!responsiveMenu)} to='/blog'>Blog</NavLink>
+                    <NavLink className={'px-3 font-semibold hover:text-red-700 duration-500'} style={activeLinkStyle} onClick={()=>setResponsiveMenu(!responsiveMenu)} to='/about'>About</NavLink>
                     {
                         user ? <div className='w-12 inline-block' onClick={()=>{setDisplayUserInf(!displayUserInfo)}}>
 

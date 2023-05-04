@@ -158,45 +158,7 @@ Create a website that shows the recipes of all available chefs. The website must
 `The best things of life are on the other side of the pain.` 
 
 
- "providerId"
-​
-1: "proactiveRefresh"
-​
-2: "reloadUserInfo"
-​
-3: "reloadListener"
-​
-4: "uid"
-​
-5: "auth"
-​
-6: "stsTokenManager"
-​
-7: "accessToken"
-​
-8: "displayName"
-​
-9: "email"
-​
-10: "emailVerified"
-​
-11: "phoneNumber"
-​
-12: "photoURL"
-​
-13: "isAnonymous"
-​
-14: "tenantId"
-​
-15: "providerData"
-​
-16: "metadata"
-​
-length: 17
-
-He work as a Chinese chef, Smith have a strong understanding of Chinese ingredients, including a variety of meats, seafood, vegetables, and spices. He is well-versed in their regional variations and seasonal availability, and  have a keen sense of balance in flavors, textures, and colors, creating visually stunning and delicious dishes.
-
-Smith Chu work in a variety of settings, from small, family-owned restaurants to high-end fine dining establishments. Depending on his experience, he is specialize in a particular regional cuisine, such as Sichuan or Cantonese, or have a more general expertise in Chinese cooking. Above all, he is dedicated to creating delicious and memorable dining experiences for his customers and expanding his knowledge of Chinese cuisine.
+ 
 
 
 ** *If the user name is available, the user's name will be visible when the mouse hovers over the profile picture.*
