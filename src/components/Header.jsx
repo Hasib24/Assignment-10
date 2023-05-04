@@ -49,7 +49,12 @@ const Header = () => {
                     <NavLink className={'px-3 font-semibold hover:text-red-700 duration-500'} style={activeLinkStyle} onClick={()=>setResponsiveMenu(!responsiveMenu)} to='/blog'>Blog</NavLink>
                     {
                         user ? <div className='w-12 inline-block' onClick={()=>{setDisplayUserInf(!displayUserInfo)}}>
-                                    
+
+                                    {
+                                    /* by hover on the display image can see displayName and by click he can find logout option
+                                        the div next to the img is conditionaly rendered to show displayName on hover on img teg
+                                        */
+                                    }
                                     <img className='rounded-full inline cursor-pointer' src={`${user.photoURL}`} onMouseEnter={()=>setHandleHoverOnHead(true)} onMouseOut={()=>setHandleHoverOnHead(null)}/>
                                     
                                     <div className={handleHoverOnHead ? `absolute text-sm font-semibold`:`absolute text-sm font-semibold hidden` }>
