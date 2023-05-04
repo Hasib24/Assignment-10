@@ -29,7 +29,7 @@ const Blog = () => {
         <div className='container mx-auto'>
             <h1 className='text-center text-2xl font-bold text-slate-800'>Wellcome to blog</h1>
             <div>
-                {qnAndAns.map(aQnAndAns =><BlogCard aQnAndAns={aQnAndAns}></BlogCard>)} 
+                {qnAndAns.map(aQnAndAns =><BlogCard aQnAndAns={aQnAndAns} key={aQnAndAns.id}></BlogCard>)} 
             </div>
         </div>
     );

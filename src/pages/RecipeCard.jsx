@@ -4,6 +4,9 @@ import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
 import LazyLoad from 'react-lazy-load';
+import Rating from 'react-rating';
+
+import { AiFillStar, AiOutlineStar } from 'react-icons/ai';
 
 const RecipeCard = ({recipe}) => {
 
@@ -39,7 +42,13 @@ const RecipeCard = ({recipe}) => {
         <LazyLoad threshold={0.95} offset={300}>
             <div className='m-3 px-8 py-5 md:flex justify-between bg-white'>
                 <div className='border px-3 py-4'>
-                    <h1>{recipiName}</h1>
+                    <h1 className="text-xl font-bold">{recipiName}</h1>
+                    <Rating
+                         placeholderRating={ratings}
+                         emptySymbol={<AiOutlineStar></AiOutlineStar>}
+                         placeholderSymbol={<AiFillStar></AiFillStar>}
+                         fullSymbol={<AiFillStar></AiFillStar>}
+                        ></Rating>
                     <span>{ratings}</span>
                     <img className='w-60 rounded-md' src={recipiImg} alt="" />
 
@@ -56,7 +65,7 @@ const RecipeCard = ({recipe}) => {
                         {cookingMethod.map(cook =><li key={cook}>{cook}</li>)}
                     </ul>
                 </div>
-                <div className='border flex items-center'>
+                <div className='flex items-center'>
                     <span onClick={()=>handleAddToFavourite(id)}><NormalBtn>Add to Favourite</NormalBtn></span>
 
                 </div>
