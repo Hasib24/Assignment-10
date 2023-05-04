@@ -3,6 +3,9 @@ import { FcGoogle } from 'react-icons/fc';
 import { BsGithub } from 'react-icons/bs';
 
 const SignInBtns = () => {
+    const handleGoogleSignInBtn = () =>{
+        log
+    }
     return (
         <>
             <button className='block border rounded-lg w-full my-2 py-1 font-semibold'><FcGoogle className='inline-block text-2xl'></FcGoogle> SignIn with Google</button>
