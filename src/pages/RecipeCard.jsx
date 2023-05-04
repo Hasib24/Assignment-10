@@ -1,6 +1,7 @@
 import React from 'react';
 import NormalBtn from '../components/NormalBtn';
-import { json } from 'react-router-dom';
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 const RecipeCard = ({recipe}) => {
 
@@ -14,12 +15,15 @@ const RecipeCard = ({recipe}) => {
             let match = pastFavourite.find(pastId => pastId==id)
 
             if(!match){
-
+                toast.success('wow! Item added')
                 let favoriteRecipes = [...pastFavourite, id]
                 localStorage.setItem('favoriteRecipi', JSON.stringify(favoriteRecipes))
-            }else{return}
+            }else{
+                toast.warn('Stop, Item alerady exist')
+            }
            
         }else{
+            toast.success('wow! item added')
             let favoriteRecipes = [id]
             localStorage.setItem('favoriteRecipi', JSON.stringify(favoriteRecipes))
 
@@ -27,7 +31,7 @@ const RecipeCard = ({recipe}) => {
     }
 
 
-    
+
     const {id, recipiImg, recipiName, ingredients, cookingMethod, ratings} = recipe;
     return (
         <div className='m-3 px-8 py-5 md:flex justify-between bg-white'>
@@ -53,6 +57,8 @@ const RecipeCard = ({recipe}) => {
                 <span onClick={()=>handleAddToFavourite(id)}><NormalBtn>Add to Favourite</NormalBtn></span>
                 
             </div>
+
+            <ToastContainer></ToastContainer>
             
         </div>
     );
