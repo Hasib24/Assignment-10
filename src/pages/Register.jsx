@@ -58,8 +58,8 @@ const Register = () => {
 
 
     return (
-        <div className='justify-center flex container mx-auto my-6'>
-            <form className='px-10 py-6 border' onSubmit={handleOnSubmit}>
+        <div className='justify-center flex flex-col container mx-auto my-6'>
+            <form className='px-10 py-6 border mx-auto' onSubmit={handleOnSubmit}>
                 <input className='block border rounded-lg my-3 p-2 w-72 outline-none' type="text" name="name" id="name" placeholder='Enter name' required />
                 <input className='block border rounded-lg my-3 p-2 w-72 outline-none' type="email" name="email" id="email" placeholder='Enter email' required />
                 
@@ -70,11 +70,12 @@ const Register = () => {
                 <input className={!tarmsAndPolices ? `border border-red-600 rounded-lg w-72 py-1 bg-blue-500 hover:bg-white text-white hover:text-blue-500 font-semibold cursor-pointer duration-500` : `border border-blue-600 rounded-lg w-72 py-1 bg-blue-800 hover:bg-white text-white hover:text-blue-800 font-semibold cursor-pointer duration-500` } type="submit" value="Create" disabled={!tarmsAndPolices} />
                 <p className='my-5'>Already have an account ? <Link to='/login' className='text-blue-600'>Login</Link> </p>
                 
-            </form>
-            <p>
+                <p className='mx-auto'>
                     <span className='block text-center'>OR</span>
                     <SignInBtns></SignInBtns>
             </p>
+            </form>
+            
         </div>
     );
 };
