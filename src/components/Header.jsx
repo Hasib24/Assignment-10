@@ -39,7 +39,7 @@ const Header = () => {
                 <NavLink className={'px-3 font-semibold hover:text-red-700 duration-500'} style={activeLinkStyle} onClick={()=>setResponsiveMenu(!responsiveMenu)} to='/blog'>Blog</NavLink>
                 {
                     user ? <p className='w-10 inline-block  border ' onClick={()=>{setDisplayUserInf(!displayUserInfo)}}>
-                                <img className='rounded-full inline cursor-pointer' src="https://avatars.githubusercontent.com/u/113421583?v=4" alt="" />
+                                <img className='rounded-full inline cursor-pointer' src={`''${user.photoURL}`} alt="proPic" />
                                 <div className={ displayUserInfo ? `absolute border rounded-lg bg-slate-700 text-white right-0 p-5` : `absolute hidden` }>
                                     <h1 className=''>Name: {user.displayName}</h1>
                                     <h1 className=''>Email: {user.email}</h1>
