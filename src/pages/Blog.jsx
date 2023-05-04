@@ -2,18 +2,18 @@ import React from 'react';
 import BlogCard from './BlogCard';
 import { BsPrinter } from 'react-icons/bs';
 
-import { Document, Page, Text, View, StyleSheet } from '@react-pdf/renderer';
-const styles = StyleSheet.create({
-    page: {
-      flexDirection: 'row',
-      backgroundColor: '#E4E4E4'
-    },
-    section: {
-      margin: 10,
-      padding: 10,
-      flexGrow: 1
-    }
-  });
+// import { Document, Page, Text, View, StyleSheet } from '@react-pdf/renderer';
+// const styles = StyleSheet.create({
+//     page: {
+//       flexDirection: 'row',
+//       backgroundColor: '#E4E4E4'
+//     },
+//     section: {
+//       margin: 10,
+//       padding: 10,
+//       flexGrow: 1
+//     }
+//   });
 
 
 const qnAndAns = [
@@ -41,27 +41,27 @@ const qnAndAns = [
 
 const Blog = () => {
     return (
-        <Document>
-            <Page size="A4" style={styles.page}>
-                <View style={styles.section}>
-                <div className='container mx-auto my-10'>
-                    <h1 className='text-center text-2xl font-bold text-slate-800'>Wellcome to blog</h1>
-                    <div className='text-right'><button className='border rounded-md p-2 font-semibold hover:text-white hover:bg-slate-600'><BsPrinter className='inline m-1 text-xl'></BsPrinter>Print  </button> </div>
-                    <div>
-                        {qnAndAns.map(aQnAndAns =><BlogCard aQnAndAns={aQnAndAns} key={aQnAndAns.id}></BlogCard>)} 
-                    </div>
-                    </div>
-                </View>
-            </Page>
+        // <Document>
+        //     <Page size="A4" style={styles.page}>
+        //         <View style={styles.section}>
+        //         <div className='container mx-auto my-10'>
+        //             <h1 className='text-center text-2xl font-bold text-slate-800'>Wellcome to blog</h1>
+        //             <div className='text-right'><button className='border rounded-md p-2 font-semibold hover:text-white hover:bg-slate-600'><BsPrinter className='inline m-1 text-xl'></BsPrinter>Print  </button> </div>
+        //             <div>
+        //                 {qnAndAns.map(aQnAndAns =><BlogCard aQnAndAns={aQnAndAns} key={aQnAndAns.id}></BlogCard>)} 
+        //             </div>
+        //             </div>
+        //         </View>
+        //     </Page>
 
-        </Document>
-        // <div className='container mx-auto my-10'>
-        //     <h1 className='text-center text-2xl font-bold text-slate-800'>Wellcome to blog</h1>
-        //     <div className='text-right'><button className='border rounded-md p-2 font-semibold hover:text-white hover:bg-slate-600'><BsPrinter className='inline m-1 text-xl'></BsPrinter>Print  </button> </div>
-        //     <div>
-        //         {qnAndAns.map(aQnAndAns =><BlogCard aQnAndAns={aQnAndAns} key={aQnAndAns.id}></BlogCard>)} 
-        //     </div>
-        // </div>
+        // </Document>
+        <div className='container mx-auto my-10'>
+            <h1 className='text-center text-2xl font-bold text-slate-800'>Wellcome to blog</h1>
+            <div className='text-right'><button className='border rounded-md p-2 font-semibold hover:text-white hover:bg-slate-600'><BsPrinter className='inline m-1 text-xl'></BsPrinter>Print  </button> </div>
+            <div>
+                {qnAndAns.map(aQnAndAns =><BlogCard aQnAndAns={aQnAndAns} key={aQnAndAns.id}></BlogCard>)} 
+            </div>
+        </div>
     );
 };
 
