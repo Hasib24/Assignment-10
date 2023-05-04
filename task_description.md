@@ -22,7 +22,7 @@ Create a website that shows the recipes of all available chefs. The website must
     - GitHub Sign-in
     - A link that will redirect to the registration page
 
-1. The Registration page will have the Email/Password form having the following fields: 
+4. The Registration page will have the Email/Password form having the following fields: 
 
     -   Name
 
@@ -34,7 +34,7 @@ Create a website that shows the recipes of all available chefs. The website must
 
     > **Note:** Do not enforce the email verification method, as it will inconvenience the examiner. If you want, you can add email verification after receiving the assignment result.
 
-1. On the Registration page, display errors when: 
+5. On the Registration page, display errors when: 
 
     -   A user's email address or password doesn't match.
 
@@ -197,3 +197,8 @@ length: 17
 He work as a Chinese chef, Smith have a strong understanding of Chinese ingredients, including a variety of meats, seafood, vegetables, and spices. He is well-versed in their regional variations and seasonal availability, and  have a keen sense of balance in flavors, textures, and colors, creating visually stunning and delicious dishes.
 
 Smith Chu work in a variety of settings, from small, family-owned restaurants to high-end fine dining establishments. Depending on his experience, he is specialize in a particular regional cuisine, such as Sichuan or Cantonese, or have a more general expertise in Chinese cooking. Above all, he is dedicated to creating delicious and memorable dining experiences for his customers and expanding his knowledge of Chinese cuisine.
+
+
+** *If the user name is available, the user's name will be visible when the mouse hovers over the profile picture.*
+Create a readme for **client-side** and write about your project (at least 5 bullet points) .Do not forget to add your live site link of your website here. 
+Apply lazy load to the chef picture either on the banner of `Chef Recipes` or on the chef pictures of the six cards on the Homepage.

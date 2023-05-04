@@ -9,7 +9,7 @@ const ChefRecipeCardGroup = () => {
         <section className='bg-slate-200 py-10'>
         <div className='container mx-auto'>
 
-            <h1 className='text-5xl font-bold text-center tracking-wider text-transparent bg-clip-text bg-gradient-to-r from-blue-700 to-green-600'>Recipes of </h1>
+            <h1 className='text-5xl font-bold text-center tracking-wider text-transparent bg-clip-text bg-gradient-to-r from-blue-700 to-green-600'>Recipes of {chef.chefName}</h1>
             <div>
                 
                 {recipes.map((recipe)=>{
