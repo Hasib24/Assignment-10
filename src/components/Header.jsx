@@ -38,14 +38,15 @@ const Header = () => {
                 <NavLink className={'px-3 font-semibold hover:text-red-700 duration-500'} style={activeLinkStyle} onClick={()=>setResponsiveMenu(!responsiveMenu)} to='/'>Home</NavLink>
                 <NavLink className={'px-3 font-semibold hover:text-red-700 duration-500'} style={activeLinkStyle} onClick={()=>setResponsiveMenu(!responsiveMenu)} to='/blog'>Blog</NavLink>
                 {
-                    user ? <p className='w-10 inline-block  border ' onClick={()=>{setDisplayUserInf(!displayUserInfo)}}>
-                                <img className='rounded-full inline cursor-pointer' src={`''${user.photoURL}`} alt="proPic" />
+                    user ? <div className='w-10 inline-block  border ' onClick={()=>{setDisplayUserInf(!displayUserInfo)}}>
+                                <img className='rounded-full inline cursor-pointer' src={`${user.photoURL}`} />
+                                {console.log(user.photoURL)}
                                 <div className={ displayUserInfo ? `absolute border rounded-lg bg-slate-700 text-white right-0 p-5` : `absolute hidden` }>
                                     <h1 className=''>Name: {user.displayName}</h1>
                                     <h1 className=''>Email: {user.email}</h1>
                                     <button className='border p-1 mt-5 rounded-lg' onClick={()=>{logOut()}}>Logout</button>
                                 </div>
-                            </p> : <NavLink className={'px-3 font-semibold hover:text-red-700 duration-500'} style={activeLinkStyle} onClick={()=>setResponsiveMenu(!responsiveMenu)} to='/login'>Login</NavLink>
+                            </div> : <NavLink className={'px-3 font-semibold hover:text-red-700 duration-500'} style={activeLinkStyle} onClick={()=>setResponsiveMenu(!responsiveMenu)} to='/login'>Login</NavLink>
 
                 }
                 
