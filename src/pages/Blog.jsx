@@ -25,7 +25,7 @@ const qnAndAns = [
     {
         id: 2,
         qn: "How to validate React props using PropTypes?",
-        ans: "Custom hook is a system of pecketing complex code and logic into a reusable function. It is easier to share and maintain across multiple components"
+        ans: " To validate props using PropType first I have toi mport PropTypes from the prop-types package. Thend efine a propTypes object inside your React component class or function.Define each prop as a property of the propTypes object with its expected data type.Finally pass the props object as a parameter to your component.PropTypes will throw an error in the console if a prop is not of the expected data type."
     },
     {
         id: 3,
