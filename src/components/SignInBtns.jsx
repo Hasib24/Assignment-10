@@ -1,12 +1,13 @@
 import React, { useContext } from 'react';
 import { FcGoogle } from 'react-icons/fc';
 import { BsGithub } from 'react-icons/bs';
-import { getAuth, GoogleAuthProvider, signInWithPopup } from 'firebase/auth';
+import { getAuth, GithubAuthProvider, GoogleAuthProvider, signInWithPopup } from 'firebase/auth';
 import { app } from '../../firebase.config';
 import { Result } from 'postcss';
 import { AuthContext } from '../providers/AuthContextProvider';
 
 const googleProvider = new GoogleAuthProvider()
+const gitHubProvider = new GithubAuthProvider()
 const auth = getAuth(app);
 
 
@@ -22,7 +23,9 @@ const SignInBtns = () => {
     }
 
     const handleGitHubSignInBtn = () =>{
-        console.log(`git clicked`);
+        signInWithPopup(auth, gitHubProvider)
+        .then(result=>setUser(result.user))
+        .catch(error =>console.log(error.message))
     }
 
     return (
