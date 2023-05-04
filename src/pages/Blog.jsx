@@ -5,7 +5,7 @@ const qnAndAns = [
     {
         id: 1,
         qn: "What is the differences between uncontrolled and controlled components?",
-        ans: "Context API should be used when we have data that needs to be shared to many components in our React project. It increase efficiency and give the chance of avoiding multi level props drilling."
+        ans: "In React, there are two ways to manage the state of form components: controlled and uncontrolled components. In uncontrolled components, the form data is handled by the DOM itself, while in controlled components, the form data is handled by React. In controlled components, the value of the form input is set as a state property and updated by an event handler."
     },
     {
         id: 2,
@@ -15,7 +15,7 @@ const qnAndAns = [
     {
         id: 3,
         qn: "What is the difference between nodejs and express js?",
-        ans: "It is a react hook which allow us to manupulate DOM directly. Value, style, focus etc. can be manupulate by suing useRef() hook"
+        ans: "Node.js is a runtime environment for executing JavaScript on the server-side, while Express.js is a web framework that runs on top of Node.js and provides a set of features and utilities for building web applications and APIs."
     },
     {
         id: 4,
