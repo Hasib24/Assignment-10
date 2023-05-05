@@ -13,3 +13,11 @@
     4.add firebase authentication
     5.Answered interview quistions
 
+
+ERROR:
+>Firebase: Error (auth/network-request-failed).      Register.jsx:45:32;
+
+I was carrying this error from the commit ( > [bf20b6d] : problem: not getting the value of password )
+unlill this commit. But there was no such error just before the commit [5881361] : add tarms and policy checkbox.
+So, to solve this error I just copy whole Regester.jsx from [5881361] and pest it to the present.
+Finally the error has gon
